@@ -2,27 +2,34 @@
 <html>
     <title>MUSICIAN</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
  
-<body>
+  
 
-<h2>Musician guess by Sushmitha</h2>
-<label for="GuessMusician"> Enter the secret musician name </label>
+<body style="background-color:darkcyan">
 
-<input type ="password" id="SecretMusician" name="SecretMusician" min=10 max=50 step=2 value="John Lennon"> <br>
+<h2 style="color: rgb(109, 200, 39);">Musician guess by Sushmitha</h2>
+
+<label for="GuessMusician" text-color> Enter the secret musician name </label>
+
+
+<input type ="password" id="SecretMusician" name="SecretMusician" min=10 max=50 step=2 value="John Lennon"> 
+<br>
 
     <label for="GuessMusician">Guess the musician </label>
+    
     <input type ="text" id="GuessMusician" name="GuessMusician" autofocus> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess ">
+    <input type="button" onclick="checkGuess()" value="Check the guess " class="btn btn-primary">
 </form>
-<p id="result">This text will be replaced </p>
+<p id="result" style="color:rgb(147, 229, 65)">This text will be replaced </p>
 
+<div class="alert alert-primary">
 <script> 
+
     correct=0;
     wrong=0;
     function checkGuess(){
@@ -31,20 +38,23 @@
         guess = document.getElementById("GuessMusician").value
        if(secret==guess){
         correct=correct+1
+       
         alert("You got it right")
        }
        else{
         wrong+=1
-        alert("Wrong Musician")
         if(wrong>=3)
         {
             alert("Sorry, game over.")
         }
+
+        
        }
         
        document.getElementById("result").innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
 }
 </script>
+</div>
 
 <img src="ant.jpg" class="img-circle" height="100px" width="100px" alt="ANT" id="function" onclick="swapImage()">
 <script> 

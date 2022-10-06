@@ -2,19 +2,19 @@
 <html>
 <head>
     <title>Discount Data</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
 </head>
-<body>
+<body style="background-color:darkseagreen">
 
-<h1>Sushmitha Yelamakonda computes discount</h1>
-<h2>Getting input</h2>
+<b><h1 style="color:rgb(219, 207, 41) ">Sushmitha Yelamakonda computes discount</h1></b>
+<h2 style="color:rgb(115, 64, 163)">Getting input</h2>
 
-
+<div class="form-group">
 <form>
     <label for="bvalue">Enter base amount </label>
     <input type ="number" id="bvalue" name="bvalue" value=20> <br>
@@ -23,14 +23,15 @@
     <label for="disvalue">Enter the discount percentage</label>
     <input type ="number" id="disvalue" name="disvalue" value=10> <br>
     
-    <input type="button" class="btn btn-warning" onclick="discount()" value="Apply discount">
+    <input type="button" class="btn btn-success" onclick="discount()" value="Apply discount">
 </form>
+</div>
 
 <p id="result">This text will be replaced </p>
 
 
 <br>
-
+<div class="form-group">
 <form>
     
     <input type="radio" id="A" name="type" onclick="chooseOp()" value="times">
@@ -44,6 +45,7 @@
     <input type="radio" id="C" name="type" onclick="chooseOp()" value="exponent">
     <label for="C">**</label> <br>
 </form>
+</div>
 
 
 

@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html>
+    <title>MUSICIAN</title>
  
 <body>
 
-<h2>Getting input</h2>
+<h2>Musician guess by Sushmitha</h2>
 
-<form>
-    <label for="form1_age">What is your age </label>
-    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+<input type ="password" id="SecretMusician" name="SecretMusician" min=10 max=50 step=2 value="John Lennon"> <br>
 
-    <label for="form1_nick">What is your nickname </label>
-    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
+    <label for="GuessMusician">Guess the musician </label>
+    <input type ="text" id="GuessMusician" name="GuessMusician" autofocus> <br>
 
-    <input type="button" onclick="resolveForm()" value="Get values from form">
+    <input type="button" onclick="checkGuess()" value="Check the guess ">
 </form>
-
-
 <p id="result">This text will be replaced </p>
 
 <script> 
-
-function resolveForm (){
-    console.log("Getting form values")
-    age = document.getElementById("form1_age").value
-    nick = document.getElementById("form1_nick").value
-    confirmed = confirm("Are these the values? "+age+" and "+nick)
-    
-    out = document.getElementById("result")
-    if(confirmed){
-        out.innerHTML = "Values were confirmed"
-    } else {
-        out.innerHTML = "Values were not confirmed"
-    }
+    correct=0;
+    wrong=0;
+    function checkGuess(){
+        console.log("Check the guess")
+        secret = document.getElementById("SecretMusician").value
+        guess = document.getElementById("GuessMusician").value
+       if(secret==guess){
+        correct=correct+1
+        alert("You got it right")
+       }
+       else{
+        wrong+=1
+        alert("Wrong Musician")
+       }
+        
+        result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
 }
 </script>
+<div>
+<img src="Earwig.jpg" alt="Earwig" width="100" height="100">
+</div id="demo"> 
+
+<button onclick="swapImage()">Click Here</button>
+<script>
+    function swapImage() {
+        useImage=2;
+     
+      switch(useImage){
+        case 1:
+        document.getElementById("demo").src="Earwig.jpg";
+            break;
+       case 2: 
+       document.getElementById("demo").src="Earwig.jpg";
+       break;
+       case 3:
+       document.getElementById("demo").src="Earwig.jpg";
+       break;
+      }
+      
+      
+    }
+    </script>
+
 
 </body>
 </html> 
